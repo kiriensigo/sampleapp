@@ -1,0 +1,389 @@
+Started GET "/" for ::1 at 2024-06-16 15:14:59 +0900
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 365)
+Completed 200 OK in 243ms (Views: 67.7ms | ActiveRecord: 0.0ms | Allocations: 8691)
+
+
+Started GET "/" for ::1 at 2024-06-16 15:59:50 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 365)
+Completed 200 OK in 39ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 4878)
+
+
+Started GET "/articles" for ::1 at 2024-06-16 16:16:13 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/articles"):
+  
+Started GET "/articles" for ::1 at 2024-06-16 16:16:45 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 883.3ms | Allocations: 81411)
+Completed 500 Internal Server Error in 901ms (ActiveRecord: 0.0ms | Allocations: 82382)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (C:/Users/iamto/sample_app/tmp/cache/assets/sprockets/v4.0.0/rY/rYo_zRmFqum1okm3uu_qV6s-_dMdmMLKafBIeWiG4_w.cache.34640.19032.335968, C:/Users/iamto/sample_app/tmp/cache/assets/sprockets/v4.0.0/rY/rYo_zRmFqum1okm3uu_qV6s-_dMdmMLKafBIeWiG4_w.cache)):
+  
+sprockets (4.2.1) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.2.1) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.2.1) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.2.1) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.2.1) lib/sprockets/cache.rb:93:in `fetch'
+sprockets (4.2.1) lib/sprockets/base.rb:71:in `file_digest'
+sprockets (4.2.1) lib/sprockets.rb:213:in `block in <module:Sprockets>'
+sprockets (4.2.1) lib/sprockets/dependencies.rb:68:in `resolve_dependency'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:54:in `block in resolve_dependency'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:54:in `resolve_dependency'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `block in resolve_dependencies'
+C:/Ruby33-x64/lib/ruby/3.3.0/set.rb:501:in `each_key'
+C:/Ruby33-x64/lib/ruby/3.3.0/set.rb:501:in `each'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `map'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `resolve_dependencies'
+sprockets (4.2.1) lib/sprockets/loader.rb:222:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.1) lib/sprockets/loader.rb:184:in `load_from_unloaded'
+sprockets (4.2.1) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:339:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.1) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:359:in `run_task'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:350:in `block (3 levels) in create_worker'
+<internal:kernel>:187:in `loop'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `block (2 levels) in create_worker'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `catch'
+concurrent-ruby (1.3.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `block in create_worker'
+Started GET "/articles" for ::1 at 2024-06-16 16:24:43 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 90)
+  Rendered layout layouts/application.html.erb (Duration: 93.5ms | Allocations: 34712)
+Completed 200 OK in 107ms (Views: 102.1ms | ActiveRecord: 0.0ms | Allocations: 35617)
+
+
+Started GET "/" for ::1 at 2024-06-16 16:29:45 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 255)
+Completed 200 OK in 8ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 823)
+
+
+Started GET "/" for ::1 at 2024-06-16 16:29:59 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 210)
+
+
+Started GET "/" for ::1 at 2024-06-16 16:30:05 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 209)
+
+
+Started GET "/" for ::1 at 2024-06-16 16:30:20 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 90)
+  Rendered layout layouts/application.html.erb (Duration: 114.5ms | Allocations: 18331)
+Completed 200 OK in 124ms (Views: 120.8ms | ActiveRecord: 0.0ms | Allocations: 19231)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (16.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-06-16 09:07:15.659446', '2024-06-16 09:07:15.659449') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20240616090141)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240616090141') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2024-06-16 18:18:24 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (C:/Users/iamto/sample_app/app/controllers/application_controller.rb:4: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/controllers/application_controller.rb:4: syntax error, unexpected end-of-input, expecting `end' or dummy end
+app/controllers/articles_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2024-06-16 18:19:58 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1095)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1181)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 2075)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil):
+    1: <h1>Articles</h1>
+    2: 
+    3: <ul>
+    4:     <% @articles.each do |article| %>
+    5:         <li>
+    6:             <%= article.title %>
+    7:         </li>
+  
+app/views/articles/index.html.erb:4
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Create (1.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Hello Rails"], ["body", "I am on Rails!"], ["created_at", "2024-06-16 09:22:31.373551"], ["updated_at", "2024-06-16 09:22:31.373551"]]
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2024-06-16 18:23:02 +0900
+Started GET "/" for ::1 at 2024-06-16 18:32:46 +0900
+Started GET "/" for ::1 at 2024-06-16 18:32:46 +0900
+Started GET "/" for ::1 at 2024-06-16 18:32:46 +0900
+Started GET "/" for ::1 at 2024-06-16 18:32:46 +0900
+Processing by ArticlesController#index as HTML
+Processing by ArticlesController#index as HTML
+Processing by ArticlesController#index as HTML
+Processing by ArticlesController#index as HTML
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1295)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2450)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 5233)
+
+
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2215)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 4309)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms | Allocations: 6543)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil):
+    1: <h1>Articles</h1>
+    2: 
+    3: <ul>
+    4:   <% @articles.each do |article| %>
+    5:     <li>
+    6:       <%= article.title %>
+    7:     </li>
+  
+app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 3063)
+  Rendered layout layouts/application.html.erb (Duration: 393.0ms | Allocations: 308206)
+Completed 500 Internal Server Error in 420ms (ActiveRecord: 0.0ms | Allocations: 310557)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 993)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1081)
+Completed 500 Internal Server Error in 420ms (ActiveRecord: 0.0ms | Allocations: 312855)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil):
+    1: <h1>Articles</h1>
+    2: 
+    3: <ul>
+    4:   <% @articles.each do |article| %>
+    5:     <li>
+    6:       <%= article.title %>
+    7:     </li>
+  
+app/views/articles/index.html.erb:4
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 932)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1833)
+Completed 500 Internal Server Error in 817ms (ActiveRecord: 0.0ms | Allocations: 620027)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil):
+    1: <h1>Articles</h1>
+    2: 
+    3: <ul>
+    4:   <% @articles.each do |article| %>
+    5:     <li>
+    6:       <%= article.title %>
+    7:     </li>
+  
+app/views/articles/index.html.erb:4
+  
+ActionView::Template::Error (undefined method `each' for nil):
+    1: <h1>Articles</h1>
+    2: 
+    3: <ul>
+    4:   <% @articles.each do |article| %>
+    5:     <li>
+    6:       <%= article.title %>
+    7:     </li>
+  
+app/views/articles/index.html.erb:4
+  
+ActionView::Template::Error (undefined method `each' for nil):
+    1: <h1>Articles</h1>
+    2: 
+    3: <ul>
+    4:   <% @articles.each do |article| %>
+    5:     <li>
+    6:       <%= article.title %>
+    7:     </li>
+  
+app/views/articles/index.html.erb:4
+Started GET "/" for ::1 at 2024-06-16 18:32:50 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 990)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1075)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1319)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil):
+    1: <h1>Articles</h1>
+    2: 
+    3: <ul>
+    4:   <% @articles.each do |article| %>
+    5:     <li>
+    6:       <%= article.title %>
+    7:     </li>
+  
+app/views/articles/index.html.erb:4
+Started GET "/" for ::1 at 2024-06-16 18:33:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1655)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1775)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms | Allocations: 6423)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil):
+    1: <h1>Articles</h1>
+    2: 
+    3: <ul>
+    4:   <% @articles.each do |article| %>
+    5:     <li>
+    6:       <%= article.title %>
+    7:     </li>
+  
+app/views/articles/index.html.erb:4
+Started GET "/" for ::1 at 2024-06-16 18:35:54 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1085)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1171)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 2062)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil):
+    1: <h1>Articles</h1>
+    2: 
+    3: <ul>
+    4:   <% @articles.each do |article| %>
+    5:     <li>
+    6:       <%= article.title %>
+    7:     </li>
+  
+app/views/articles/index.html.erb:4
+Started GET "/" for ::1 at 2024-06-16 18:37:46 +0900
+  
+NameError (uninitialized constant ApplicationController):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/articles_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2024-06-16 18:39:46 +0900
+  
+NameError (uninitialized constant ApplicationController):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/articles_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2024-06-16 18:40:19 +0900
+  
+Zeitwerk::NameError (expected file C:/Users/iamto/sample_app/app/controllers/application_controller.rb to define constant ApplicationController, but didn't):
+  
+app/controllers/articles_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2024-06-16 18:41:39 +0900
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 51.7ms | Allocations: 9522)
+  Rendered layout layouts/application.html.erb (Duration: 148.9ms | Allocations: 44700)
+Completed 200 OK in 203ms (Views: 151.0ms | ActiveRecord: 5.6ms | Allocations: 51624)
+
+
+Started GET "/articles/1" for ::1 at 2024-06-16 18:49:20 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/articles/1"):
+  
+Started GET "/articles/1" for ::1 at 2024-06-16 18:49:33 +0900
+  
+SyntaxError (C:/Users/iamto/sample_app/app/controllers/articles_controller.rb:7: syntax error, unexpected ';', expecting ']'
+...article = Article.find(params[;id])
+...                              ^
+C:/Users/iamto/sample_app/app/controllers/articles_controller.rb:7: syntax error, unexpected ']', expecting `end' or dummy end
+...icle = Article.find(params[;id])
+...                              ^
+):
+  
+app/controllers/articles_controller.rb:7: syntax error, unexpected ';', expecting ']'
+app/controllers/articles_controller.rb:7: syntax error, unexpected ']', expecting `end' or dummy end
+Started GET "/articles/1" for ::1 at 2024-06-16 18:51:26 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 137)
+  Rendered layout layouts/application.html.erb (Duration: 61.4ms | Allocations: 15691)
+Completed 200 OK in 93ms (Views: 70.3ms | ActiveRecord: 3.2ms | Allocations: 21792)
+
+
