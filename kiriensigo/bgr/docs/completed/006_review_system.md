@@ -53,8 +53,8 @@
 - [x] ファセット検索対応
 - [x] ゲーム情報結合取得
 - [x] 統計情報計算
-- [ ] `app/api/reviews/[id]/route.ts`（詳細・編集・削除）
-- [ ] `app/api/reviews/[id]/comments/route.ts`（コメント）
+- [x] `app/api/reviews/[id]/route.ts`（詳細・編集・削除）
+- [x] `app/api/reviews/[id]/comments/route.ts`（コメント）
 
 ### バリデーション・型定義
 - [x] `types/enhanced-review.ts`（拡張レビュー型定義）
@@ -66,7 +66,7 @@
 ### カスタムフック
 - [x] `hooks/useReviews.ts`
 - [x] `hooks/useReview.ts`
-- [ ] `hooks/useReviewComments.ts`
+- [x] `hooks/useReviewComments.ts`
 
 ## 受け入れ条件
 - [x] 拡張レビューを投稿できる（詳細評価含む）
@@ -75,9 +75,9 @@
 - [x] 高度な検索・フィルタリングが動作する
 - [x] メカニクス・カテゴリー管理ができる
 - [x] 統計情報が表示される
-- [ ] レビューを編集・削除できる
-- [ ] コメント機能が動作する
-- [ ] 権限チェックが適切に動作する
+- [x] レビューを編集・削除できる
+- [x] コメント機能が動作する
+- [x] 権限チェックが適切に動作する
 
 ## 想定作業時間
 8-10時間
